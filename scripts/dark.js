@@ -1,5 +1,7 @@
 document.addEventListener("DOMContentLoaded", () => {
-    const nav = document.querySelectorAll(".main-nav a");
+    const osLink = document.querySelector("#os");
+    const darkLink = document.querySelector("#dark");
+    const lightLink = document.querySelector("#light");
     const body = document.body;
 
     const toggleMode = (mode) => {
@@ -12,17 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
         }
     };
 
-    nav[0].addEventListener("click", (event) => {
+    osLink.addEventListener("click", (event) => {
         event.preventDefault();
         toggleMode("os");
     });
 
-    nav[1].addEventListener("click", (event) => {
+    darkLink.addEventListener("click", (event) => {
         event.preventDefault();
         toggleMode("dark");
     });
 
-    nav[2].addEventListener("click", (event) => {
+    lightLink.addEventListener("click", (event) => {
         event.preventDefault();
         toggleMode("light");
     });

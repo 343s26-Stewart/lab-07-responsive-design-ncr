@@ -44,6 +44,16 @@ body.dark-mode.debug.wrapper > * {
     border-color: var(--dark-border-color);
 }
 
+/* Light mode */
+body.light-mode {
+    background-color: initial;
+    color: initial;
+}
+
+body.light-mode.debug.wrapper > * {
+    border-color: var(--border-color);
+}
+
 body.tall {
     height: 100vh;
 }
