@@ -1,0 +1,103 @@
+/* edit dark.css such that if the user has a “dark” preference, 
+   the page will be styled with a dark theme. */
+
+:root {
+    --dark-lion: #2a2f3a;
+    --dark-tiger: #3a2f2a;
+    --dark-wolf: #3a2a2a;
+    --dark-bear: #2a3a3a;
+    --dark-webelos: #2f3a2a;
+    --dark-aol: #3a2f3a;
+    --dark-border-color: #f0f5f4;
+}
+
+body.dark-mode {
+    background-color: #12161d;
+    color: #e8edf5;
+}
+
+body.dark-mode.debug {
+    header.main-head {
+        background-color: var(--dark-lion);
+    }
+
+    nav.main-nav {
+        background-color: var(--dark-tiger);
+    }
+
+    main.content {
+        background-color: var(--dark-wolf);
+    }
+
+    aside.side {
+        background-color: var(--dark-bear);
+    }
+
+    div.ad {
+        background-color: var(--dark-webelos);
+    }
+
+    footer.main-footer {
+        background-color: var(--dark-aol);
+    }
+
+    &.wrapper > * {
+        border: 0.125rem solid var(--dark-border-color);
+    }
+}
+
+@media (width >=500px) {
+    body.debug.wrapper>* {
+        border: 0.25rem solid var(--dark-border-color);
+    }
+}
+
+@media (width >=700px) {
+    body.debug.wrapper>* {
+        border: 0.5rem solid var(--dark-border-color);
+    }
+}
+
+body.tall {
+    height: 100vh;
+}
+
+img {
+    max-width: 100%;
+}
+
+/* OS default */
+@media (prefers-color-scheme: dark) {
+    body:not(.light-mode) {
+        background-color: #12161d;
+        color: #e8edf5;
+    }
+
+    body:not(.light-mode).debug header.main-head {
+        background-color: var(--dark-lion);
+    }
+
+    body:not(.light-mode).debug nav.main-nav {
+        background-color: var(--dark-tiger);
+    }
+
+    body:not(.light-mode).debug main.content {
+        background-color: var(--dark-wolf);
+    }
+
+    body:not(.light-mode).debug aside.side {
+        background-color: var(--dark-bear);
+    }
+
+    body:not(.light-mode).debug div.ad {
+        background-color: var(--dark-webelos);
+    }
+
+    body:not(.light-mode).debug footer.main-footer {
+        background-color: var(--dark-aol);
+    }
+
+    body:not(.light-mode).debug.wrapper > * {
+        border-color: var(--dark-border-color);
+    }
+}
