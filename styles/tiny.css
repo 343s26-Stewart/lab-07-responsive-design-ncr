@@ -1,0 +1,23 @@
+
+/* Tiny viewport breakpoint: single column layout with main article area first, followed only by nav */
+@media (width <= 374px) {
+    body.debug.wrapper>* {
+        border: 0.0625rem solid var(--border-color);
+    }
+
+    .wrapper {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "content"
+            "nav";
+    }
+
+    .main-head,
+    .side,
+    .ad,
+    .main-footer {
+        display: none;
+        visibility: hidden;
+        height: 0; width: 0; overflow: hidden;
+    }
+}
