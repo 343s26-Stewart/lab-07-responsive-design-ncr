@@ -1,0 +1,8 @@
+html {
+    direction: ltr; /* or rtl */
+}
+
+/* body {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+} */
