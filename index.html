@@ -28,9 +28,9 @@ tall - force body to use exactly the viewport height
     </header>
     <nav class="main-nav">
         <ul>
-            <li><a href="">🌗 OS Default</a></li>
-            <li><a href="">🌙 Dark Mode</a></li>
-            <li><a href="">😎 Light Mode</a></li>
+            <li><a id="os" href="">🌗 OS Default</a></li>
+            <li><a id="dark" href="">🌙 Dark Mode</a></li>
+            <li><a id="light" href="">😎 Light Mode</a></li>
         </ul>
     </nav>
     <main class="content">
@@ -39,22 +39,30 @@ tall - force body to use exactly the viewport height
         <!--New paragraph for responsive images section-->
         <p>
             <!--Resolution switching-->
-            <img src="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/bowers-KH-circles-750x250.png" alt="Colorful circles pattern" 
-                srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/bowers-KH-circles-750x250.png 1x,
+            <img src="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/bowers-KH-circles-750x250.png"
+                alt="Colorful circles pattern" srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/bowers-KH-circles-750x250.png 1x,
                         https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/bowers-KH-circles-375x125.png 2x,
                         https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/bowers-KH-circles-1125x375.png 3x,
                         https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/bowers-KH-circles-1500x500.png 4x">
 
             <!--Art Direction-->
             <picture>
-                <source media="width >= 414" srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-mobile-portrait-1to1.jpg">
-                <source media="width >= 896" srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-mobile-landscape-1to1.jpg">
-                <source media="width >= 1242" srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-mobile-portrait.jpg">
-                <source media="width >= 1620" srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-mobile-landscape.jpg">
-                <source media="width >= 2448" srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-tablet-portrait.jpg">
-                <source media="width >= 3240" srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-tablet-landscape.jpg">
-                <source media="width >= 5242" srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-full.jpg">
-                <img src="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-full.jpg" alt="full image with largest size">
+                <source media="(min-width: 5242px)"
+                    srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-full.jpg">
+                <source media="(min-width: 3240px)"
+                    srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-tablet-landscape.jpg">
+                <source media="(min-width: 2448px)"
+                    srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-mobile-landscape.jpg">
+                <source media="(min-width: 1620px)"
+                    srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-tablet-portrait.jpg">
+                <source media="(min-width: 1242px)"
+                    srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-mobile-portrait.jpg">
+                <source media="(min-width: 896px)"
+                    srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-mobile-landscape-1to1.jpg">
+                <source media="(min-width: 414px)"
+                    srcset="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-mobile-portrait-1to1.jpg">
+                <img src="https://w3.cs.jmu.edu/cs343/s26/lab/07/assets/250505-ECDS-SteveAderton-full.jpg"
+                    alt="full image with largest size">
             </picture>
         </p>
 

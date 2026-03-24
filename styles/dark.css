@@ -1,4 +1,4 @@
-/* edit dark.css such that if the user has a “dark” preference, 
+/* edit dark.css such that if the user has a “dark” preference,
    the page will be styled with a dark theme. */
 
 :root {
@@ -46,9 +46,34 @@ body.dark-mode.debug.wrapper > * {
 
 /* Light mode */
 body.light-mode {
-    background-color: initial;
-    color: initial;
+    background-color: #ffffff;
+    color: #000000;
 }
+
+body.light-mode.debug header.main-head {
+    background-color: initial;
+}
+
+body.light-mode.debug nav.main-nav {
+    background-color: initial;
+}
+
+body.light-mode.debug main.content {
+    background-color: initial;
+}
+
+body.light-mode.debug aside.side {
+    background-color: initial;
+}
+
+body.light-mode.debug div.ad {
+    background-color: initial;
+}
+
+body.light-mode.debug footer.main-footer {
+    background-color: initial;
+}
+
 
 body.light-mode.debug.wrapper > * {
     border-color: var(--border-color);
@@ -64,36 +89,44 @@ img {
 
 /* OS default */
 @media (prefers-color-scheme: dark) {
-    body:not(.light-mode) {
+    body:not(.light-mode):not(.dark-mode) {
         background-color: #12161d;
         color: #e8edf5;
     }
 
-    body:not(.light-mode).debug header.main-head {
+    body:not(.light-mode):not(.dark-mode).debug header.main-head {
         background-color: var(--dark-lion);
     }
 
-    body:not(.light-mode).debug nav.main-nav {
+    body:not(.light-mode):not(.dark-mode).debug nav.main-nav {
         background-color: var(--dark-tiger);
     }
 
-    body:not(.light-mode).debug main.content {
+    body:not(.light-mode):not(.dark-mode).debug main.content {
         background-color: var(--dark-wolf);
     }
 
-    body:not(.light-mode).debug aside.side {
+    body:not(.light-mode):not(.dark-mode).debug aside.side {
         background-color: var(--dark-bear);
     }
 
-    body:not(.light-mode).debug div.ad {
+    body:not(.light-mode):not(.dark-mode).debug div.ad {
         background-color: var(--dark-webelos);
     }
 
-    body:not(.light-mode).debug footer.main-footer {
+    body:not(.light-mode):not(.dark-mode).debug footer.main-footer {
         background-color: var(--dark-aol);
     }
 
-    body:not(.light-mode).debug.wrapper > * {
+    body:not(.light-mode):not(.dark-mode).debug.wrapper > * {
         border-color: var(--dark-border-color);
+    }
+}
+
+/* OS light mode default */
+@media (prefers-color-scheme: light) {
+    body:not(.light-mode):not(.dark-mode) {
+        background-color: #ffffff;
+        color: #000000;
     }
 }
